@@ -1,0 +1,513 @@
+[
+  {
+    "Year": 2019,
+    "Winner": "Toronto Raptors",
+    "Loser": "Golden State Warriors",
+    "Score": "4-2",
+    "MVP": "Kawhi Leonard"
+  },
+  {
+    "Year": 2018,
+    "Winner": "Golden State Warriors",
+    "Loser": "Cleveland Cavaliers",
+    "Score": "4-0",
+    "MVP": "Kevin Durant"
+  },
+  {
+    "Year": 2017,
+    "Winner": "Golden State Warriors",
+    "Loser": "Cleveland Cavaliers",
+    "Score": "4-1",
+    "MVP": "Kevin Durant"
+  },
+  {
+    "Year": 2016,
+    "Winner": "Cleveland Cavaliers",
+    "Loser": "Golden State Warriors",
+    "Score": "4-3",
+    "MVP": "LeBron James"
+  },
+  {
+    "Year": 2015,
+    "Winner": "Golden State Warriors",
+    "Loser": "Cleveland Cavaliers",
+    "Score": "4-2",
+    "MVP": "Andre Iguodala"
+  },
+  {
+    "Year": 2014,
+    "Winner": "San Antonio Spurs",
+    "Loser": "Miami Heat",
+    "Score": "4-1",
+    "MVP": "Kawhi Leonard"
+  },
+  {
+    "Year": 2013,
+    "Winner": "Miami Heat",
+    "Loser": "San Antonio Spurs",
+    "Score": "4-3",
+    "MVP": "LeBron James"
+  },
+  {
+    "Year": 2012,
+    "Winner": "Miami Heat",
+    "Loser": "Oklahoma City Thunder",
+    "Score": "4-1",
+    "MVP": "LeBron James"
+  },
+  {
+    "Year": 2011,
+    "Winner": "Dallas Mavericks",
+    "Loser": "Miami Heat",
+    "Score": "4-2",
+    "MVP": "Dirk Nowitzki"
+  },
+  {
+    "Year": 2010,
+    "Winner": "Los Angeles Lakers",
+    "Loser": "Boston Celtics",
+    "Score": "4-3",
+    "MVP": "Kobe Bryant"
+  },
+  {
+    "Year": 2009,
+    "Winner": "Los Angeles Lakers",
+    "Loser": "Orlando Magic",
+    "Score": "4-1",
+    "MVP": "Kobe Bryant"
+  },
+  {
+    "Year": 2008,
+    "Winner": "Boston Celtics",
+    "Loser": "Los Angeles Lakers",
+    "Score": "4-2",
+    "MVP": "Paul Pierce"
+  },
+  {
+    "Year": 2007,
+    "Winner": "San Antonio Spurs",
+    "Loser": "Cleveland Cavaliers",
+    "Score": "4-0",
+    "MVP": "Tony Parker"
+  },
+  {
+    "Year": 2006,
+    "Winner": "Miami Heat",
+    "Loser": "Dallas Mavericks",
+    "Score": "4-2",
+    "MVP": "Dwyane Wade"
+  },
+  {
+    "Year": 2005,
+    "Winner": "San Antonio Spurs",
+    "Loser": "Detroit Pistons",
+    "Score": "4-3",
+    "MVP": "Tim Duncan"
+  },
+  {
+    "Year": 2004,
+    "Winner": "Detroit Pistons",
+    "Loser": "Los Angeles Lakers",
+    "Score": "4-1",
+    "MVP": "Chauncey Billups"
+  },
+  {
+    "Year": 2003,
+    "Winner": "San Antonio Spurs",
+    "Loser": "New Jersey Nets",
+    "Score": "4-2",
+    "MVP": "Tim Duncan"
+  },
+  {
+    "Year": 2002,
+    "Winner": "Los Angeles Lakers",
+    "Loser": "New Jersey Nets",
+    "Score": "4-0",
+    "MVP": "Shaquille O'Neal"
+  },
+  {
+    "Year": 2001,
+    "Winner": "Los Angeles Lakers",
+    "Loser": "Philadelphia 76ers",
+    "Score": "4-1",
+    "MVP": "Shaquille O'Neal"
+  },
+  {
+    "Year": 2000,
+    "Winner": "Los Angeles Lakers",
+    "Loser": "Indiana Pacers",
+    "Score": "4-2",
+    "MVP": "Shaquille O'Neal"
+  },
+  {
+    "Year": 1999,
+    "Winner": "San Antonio Spurs",
+    "Loser": "New York Knicks",
+    "Score": "4-1",
+    "MVP": "Tim Duncan"
+  },
+  {
+    "Year": 1998,
+    "Winner": "Chicago Bulls",
+    "Loser": "Utah Jazz",
+    "Score": "4-2",
+    "MVP": "Michael Jordan"
+  },
+  {
+    "Year": 1997,
+    "Winner": "Chicago Bulls",
+    "Loser": "Utah Jazz",
+    "Score": "4-2",
+    "MVP": "Michael Jordan"
+  },
+  {
+    "Year": 1996,
+    "Winner": "Chicago Bulls",
+    "Loser": "Seattle SuperSonics",
+    "Score": "4-2",
+    "MVP": "Michael Jordan"
+  },
+  {
+    "Year": 1995,
+    "Winner": "Houston Rockets",
+    "Loser": "Orlando Magic",
+    "Score": "4-0",
+    "MVP": "Hakeem Olajuwon"
+  },
+  {
+    "Year": 1994,
+    "Winner": "Houston Rockets",
+    "Loser": "New York Knicks",
+    "Score": "4-3",
+    "MVP": "Hakeem Olajuwon"
+  },
+  {
+    "Year": 1993,
+    "Winner": "Chicago Bulls",
+    "Loser": "Phoenix Suns",
+    "Score": "4-2",
+    "MVP": "Michael Jordan"
+  },
+  {
+    "Year": 1992,
+    "Winner": "Chicago Bulls",
+    "Loser": "Portland Trail Blazers",
+    "Score": "4-2",
+    "MVP": "Michael Jordan"
+  },
+  {
+    "Year": 1991,
+    "Winner": "Chicago Bulls",
+    "Loser": "Los Angeles Lakers",
+    "Score": "4-1",
+    "MVP": "Michael Jordan"
+  },
+  {
+    "Year": 1990,
+    "Winner": "Detroit Pistons",
+    "Loser": "Portland Trail Blazers",
+    "Score": "4-1",
+    "MVP": "Isiah Thomas"
+  },
+  {
+    "Year": 1989,
+    "Winner": "Detroit Pistons",
+    "Loser": "Los Angeles Lakers",
+    "Score": "4-0",
+    "MVP": "Joe Dumars"
+  },
+  {
+    "Year": 1988,
+    "Winner": "Los Angeles Lakers",
+    "Loser": "Detroit Pistons",
+    "Score": "4-3",
+    "MVP": "James Worthy"
+  },
+  {
+    "Year": 1987,
+    "Winner": "Los Angeles Lakers",
+    "Loser": "Boston Celtics",
+    "Score": "4-2",
+    "MVP": "Magic Johnson"
+  },
+  {
+    "Year": 1986,
+    "Winner": "Boston Celtics",
+    "Loser": "Houston Rockets",
+    "Score": "4-2",
+    "MVP": "Larry Bird"
+  },
+  {
+    "Year": 1985,
+    "Winner": "Los Angeles Lakers",
+    "Loser": "Boston Celtics",
+    "Score": "4-2",
+    "MVP": "Kareem Abdul-Jabbar"
+  },
+  {
+    "Year": 1984,
+    "Winner": "Boston Celtics",
+    "Loser": "Los Angeles Lakers",
+    "Score": "4-3",
+    "MVP": "Larry Bird"
+  },
+  {
+    "Year": 1983,
+    "Winner": "Philadelphia 76ers",
+    "Loser": "Los Angeles Lakers",
+    "Score": "4-0",
+    "MVP": "Moses Malone"
+  },
+  {
+    "Year": 1982,
+    "Winner": "Los Angeles Lakers",
+    "Loser": "Philadelphia 76ers",
+    "Score": "4-2",
+    "MVP": "Magic Johnson"
+  },
+  {
+    "Year": 1981,
+    "Winner": "Boston Celtics",
+    "Loser": "Houston Rockets",
+    "Score": "4-2",
+    "MVP": "Cedric Maxwell"
+  },
+  {
+    "Year": 1980,
+    "Winner": "Los Angeles Lakers",
+    "Loser": "Philadelphia 76ers",
+    "Score": "4-2",
+    "MVP": "Magic Johnson"
+  },
+  {
+    "Year": 1979,
+    "Winner": "Seattle SuperSonics",
+    "Loser": "Washington Bullets",
+    "Score": "4-1",
+    "MVP": "Dennis Johnson"
+  },
+  {
+    "Year": 1978,
+    "Winner": "Washington Bullets",
+    "Loser": "Seattle SuperSonics",
+    "Score": "4-3",
+    "MVP": "Wes Unseld"
+  },
+  {
+    "Year": 1977,
+    "Winner": "Portland Trail Blazers",
+    "Loser": "Philadelphia 76ers",
+    "Score": "4-2",
+    "MVP": "Bill Walton"
+  },
+  {
+    "Year": 1976,
+    "Winner": "Boston Celtics",
+    "Loser": "Phoenix Suns",
+    "Score": "4-2",
+    "MVP": "Jo Jo White"
+  },
+  {
+    "Year": 1975,
+    "Winner": "Golden State Warriors",
+    "Loser": "Washington Bullets",
+    "Score": "4-0",
+    "MVP": "Rick Barry"
+  },
+  {
+    "Year": 1974,
+    "Winner": "Boston Celtics",
+    "Loser": "Milwaukee Bucks",
+    "Score": "4-3",
+    "MVP": "John Havlicek"
+  },
+  {
+    "Year": 1973,
+    "Winner": "New York Knicks",
+    "Loser": "Los Angeles Lakers",
+    "Score": "4-1",
+    "MVP": "Willis Reed"
+  },
+  {
+    "Year": 1972,
+    "Winner": "Los Angeles Lakers",
+    "Loser": "New York Knicks",
+    "Score": "4-1",
+    "MVP": "Wilt Chamberlain"
+  },
+  {
+    "Year": 1971,
+    "Winner": "Milwaukee Bucks",
+    "Loser": "Baltimore Bullets",
+    "Score": "4-0",
+    "MVP": "Lew Alcindor"
+  },
+  {
+    "Year": 1970,
+    "Winner": "New York Knicks",
+    "Loser": "Los Angeles Lakers",
+    "Score": "4-3",
+    "MVP": "Willis Reed"
+  },
+  {
+    "Year": 1969,
+    "Winner": "Boston Celtics",
+    "Loser": "Los Angeles Lakers",
+    "Score": "4-3",
+    "MVP": "Jerry West"
+  },
+  {
+    "Year": 1968,
+    "Winner": "Boston Celtics",
+    "Loser": "Los Angeles Lakers",
+    "Score": "4-2",
+    "MVP": ""
+  },
+  {
+    "Year": 1967,
+    "Winner": "Philadelphia 76ers",
+    "Loser": "San Francisco Warriors",
+    "Score": "4-2",
+    "MVP": ""
+  },
+  {
+    "Year": 1966,
+    "Winner": "Boston Celtics",
+    "Loser": "Los Angeles Lakers",
+    "Score": "4-3",
+    "MVP": ""
+  },
+  {
+    "Year": 1965,
+    "Winner": "Boston Celtics",
+    "Loser": "Los Angeles Lakers",
+    "Score": "4-1",
+    "MVP": ""
+  },
+  {
+    "Year": 1964,
+    "Winner": "Boston Celtics",
+    "Loser": "San Francisco Warriors",
+    "Score": "4-1",
+    "MVP": ""
+  },
+  {
+    "Year": 1963,
+    "Winner": "Boston Celtics",
+    "Loser": "Los Angeles Lakers",
+    "Score": "4-2",
+    "MVP": ""
+  },
+  {
+    "Year": 1962,
+    "Winner": "Boston Celtics",
+    "Loser": "Los Angeles Lakers",
+    "Score": "4-3",
+    "MVP": ""
+  },
+  {
+    "Year": 1961,
+    "Winner": "Boston Celtics",
+    "Loser": "St. Louis Hawks",
+    "Score": "4-1",
+    "MVP": ""
+  },
+  {
+    "Year": 1960,
+    "Winner": "Boston Celtics",
+    "Loser": "St. Louis Hawks",
+    "Score": "4-3",
+    "MVP": ""
+  },
+  {
+    "Year": 1959,
+    "Winner": "Boston Celtics",
+    "Loser": "Minneapolis Lakers",
+    "Score": "4-0",
+    "MVP": ""
+  },
+  {
+    "Year": 1958,
+    "Winner": "St. Louis Hawks",
+    "Loser": "Boston Celtics",
+    "Score": "4-2",
+    "MVP": ""
+  },
+  {
+    "Year": 1957,
+    "Winner": "Boston Celtics",
+    "Loser": "St. Louis Hawks",
+    "Score": "4-3",
+    "MVP": ""
+  },
+  {
+    "Year": 1956,
+    "Winner": "Philadelphia Warriors",
+    "Loser": "Fort Wayne Pistons",
+    "Score": "4-1",
+    "MVP": ""
+  },
+  {
+    "Year": 1955,
+    "Winner": "Syracuse Nationals",
+    "Loser": "Fort Wayne Pistons",
+    "Score": "4-3",
+    "MVP": ""
+  },
+  {
+    "Year": 1954,
+    "Winner": "Minneapolis Lakers",
+    "Loser": "Syracuse Nationals",
+    "Score": "4-3",
+    "MVP": ""
+  },
+  {
+    "Year": 1953,
+    "Winner": "Minneapolis Lakers",
+    "Loser": "New York Knickerbockers",
+    "Score": "4-1",
+    "MVP": ""
+  },
+  {
+    "Year": 1952,
+    "Winner": "Minneapolis Lakers",
+    "Loser": "New York Knickerbockers",
+    "Score": "4-3",
+    "MVP": ""
+  },
+  {
+    "Year": 1951,
+    "Winner": "Rochester Royals",
+    "Loser": "New York Knickerbockers",
+    "Score": "4-3",
+    "MVP": ""
+  },
+  {
+    "Year": 1950,
+    "Winner": "Minneapolis Lakers",
+    "Loser": "Syracuse Nationals",
+    "Score": "4-2",
+    "MVP": ""
+  },
+  {
+    "Year": 1949,
+    "Winner": "Minneapolis Lakers",
+    "Loser": "Washington Capitols",
+    "Score": "4-2",
+    "MVP": ""
+  },
+  {
+    "Year": 1948,
+    "Winner": "Baltimore Bullets",
+    "Loser": "Philadelphia Warriors",
+    "Score": "4-2",
+    "MVP": ""
+  },
+  {
+    "Year": 1947,
+    "Winner": "Philadelphia Warriors",
+    "Loser": "Chicago Stags",
+    "Score": "4-1",
+    "MVP": ""
+  }
+]

@@ -53,12 +53,12 @@
 
 
 
-function rot13(str, shift) {
+module.exports = function rot13(str, shift) {
   const letters = 26;
   const lowercaseLowerBound = 97;
-  const lowercaseUpperBound = lowercaseLowerBound + letters;
+  const lowercaseUpperBound = lowercaseLowerBound + 25;
   const uppercaseLowerBound = 65;
-  const uppercaseUpperBound = uppercaseLowerBound + letters;
+  const uppercaseUpperBound = uppercaseLowerBound + 25;
 
   let rotResult = "";
 
@@ -76,6 +76,7 @@ function rot13(str, shift) {
       currentIndex <= uppercaseUpperBound;
 
     let shiftedIndex = currentIndex + shift;
+
     if (isLowerCase) {
       if (shiftedIndex >= lowercaseUpperBound) {
         shiftedIndex -= letters;
@@ -92,15 +93,18 @@ function rot13(str, shift) {
     }
 
     let result = String.fromCharCode(shiftedIndex);
-    if (result) {
-      rotResult += result;
-      //console.log(rotResult, "first one")
-    } else {
-      rotResult += str[i];
-      //console.log(rotResult, "second one")
-    }
-  }
 
+    if(isUpperCase || isLowerCase){
+      rotResult += result;
+
+    }
+      else{
+        rotResult += str[i];
+
+      }
+      
+    }
+    
   return rotResult;
 }
 
@@ -110,6 +114,13 @@ let encoded = rot13(rot13("Hello, Rick", shift), 1)
 let decoded = rot13(rot13(encoded, -shift), -1)
 //console.log(encoded)
 console.log(rot13("Hello, Rick", 1))
+
+// rot("HELLO", 1) -> "IFMMP" # shift right by 1
+// //     rot("HELLO", 2) -> "JGNNQ" # shift right by 2
+// //     rot("HELLO", -1) -> "GDKKN" # shift left by 1
+// //     rot("HELLO", 27) -> "IFMMP" # shift right by 27, wrapping back to the beginning
+// //     rot("Hello, Rick", 1) -> "Ifmmp, Sjdl" # Preserve case and punctuation
+// //     rot(rot("Hello, Rick", 1), -1) -> "Hello, Rick"
 
 
 /*

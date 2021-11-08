@@ -14,7 +14,7 @@ function containsAnotherCountryName(nations){
         let parent = nations[i].toLowerCase()
         for(let j = 0; j < nations.length; j++){
             let child = nations[j].toLowerCase()
-            if(parent.replace().includes(child.replace()) && child !== '' && parent !== child){
+            if(parent.includes(child) && child !== '' && parent !== child){
                 result[parent] = child
                 
             }

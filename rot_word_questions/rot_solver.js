@@ -53,7 +53,7 @@
 
 
 
-module.exports = function rot13(str, shift) {
+ exports.rot13 = function(str, shift) {
   const letters = 26;
   const lowercaseLowerBound = 97;
   const lowercaseUpperBound = lowercaseLowerBound + 25;
@@ -109,11 +109,13 @@ module.exports = function rot13(str, shift) {
 }
 
 //"JGNNQ"
-let shift = 2
-let encoded = rot13(rot13("Hello, Rick", shift), 1)
-let decoded = rot13(rot13(encoded, -shift), -1)
-//console.log(encoded)
-console.log(rot13("Hello, Rick", 1))
+// let shift = 1
+// let encoded = rot13("Hello, Rick", shift)
+// //let decoded = rot13(rot13(encoded, -shift), -1)
+// console.log(encoded)
+// console.log(decoded)
+
+
 
 // rot("HELLO", 1) -> "IFMMP" # shift right by 1
 // //     rot("HELLO", 2) -> "JGNNQ" # shift right by 2

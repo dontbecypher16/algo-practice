@@ -1,5 +1,6 @@
 const rot = require('./rot_solver')
-console.log(rot)
+const wordBank = require('./word_bank')
+
 // Using your `rot` function, write a function `decrypt` that takes a text encrypted using a shift substitution cipher of an unknown shift amount, and returns a tuple containing `(the shift used to encrypt the original string, the original string)`.
 
 // You will need a dictionary or word list. An input string needs to be long enough to unambiguously determine the the shift used, or there could be multiple valid shifts.
@@ -37,9 +38,32 @@ console.log(rot)
 // }
 
 function decrypt(text) {
+
+
   for (let i = 0; i < 26; i++) {
-    console.log(rot.rot13(text, i));
+    let decoded = rot.rot13(text, i)
+      let newDecoded = decoded.split(/[\s\W]+/)
+      //console.log(newDecoded)
+      for(let j = 0; j < newDecoded.length; j++){
+        //check if word is valid against wordbank
+        if(!wordBank.has(newDecoded[j].toUpperCase())){
+          // if word is not valid then break in iteration
+          //debugger
+          break
+        } 
+        else if(j === newDecoded.length -1){
+          // if word is valid return text and shift(or i)
+        console.log(decoded, i)
+
+        }
+
+      }
+    
   }
+
 }
 
-decrypt("Ju xbt uif cftu pg ujnft, ju xbt uif xpstu pg ujnft")
+console.log(decrypt("Ju xbt uif cftu pg ujnft, ju xbt uif xpstu pg ujnft"))
+
+// do a shift then check against wordbank
+  // if it doesnt equal to a legible word then continue on to another shift

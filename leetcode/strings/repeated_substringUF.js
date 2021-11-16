@@ -10,16 +10,30 @@
 // Explanation: It is the substring "abc" four times or the substring "abcabc" twice
 
 let repeatedSubstringPattern = function(s) {
-    let subStr = ""
     
+    let subStr = ""
+
     for(let i = 0; i < s.length; i++){
-        subStr += s[i]
-        console.log(subStr)
+        while(subStr.length < s.length){
+            subStr += s[i]
+        }
+        if(s === subStr){
+            return true
+            
+        }
+        else{
+            subStr = ""
+        }
+        
     }
+    
+    return (subStr === s) ? true : false
+        
+    
 };
 
 
-repeatedSubstringPattern("aba")
+console.log(repeatedSubstringPattern("aba"))
 // iterate over string parameter
     // use the substring method 
     // declare a variable with substring 

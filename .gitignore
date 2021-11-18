@@ -1,2 +1,3 @@
 node_modules
 leetcode\strings\name_match.js
+leetcode\strings\name_match.test.js

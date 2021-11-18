@@ -7,11 +7,5 @@
     "test": "node consecutive.js"
   },
   "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "chalk": "^4.1.2",
-    "csv": "^5.5.3",
-    "csvtojson": "^2.0.10",
-    "yargs": "^17.1.1"
-  }
+  "license": "ISC"
 }

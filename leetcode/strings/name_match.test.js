@@ -25,7 +25,7 @@ describe('nameMatch', () => {
 
 
     it('more middle name tests', () => {
-        const knownAliases = ['Alphonse Gabriel Capone', 'Alphonse Francis Capone']
+        const knownAliases = ['Alphonse Francis Capone', 'Alphonse Gabriel Capone']
         expect(nameMatch(knownAliases, 'Alphonse Gabriel Capone')).toBe(true)
         expect(nameMatch(knownAliases, 'Alphonse Edward Capone')).toBe(false)
         expect(nameMatch(knownAliases, 'Alphonse Francis Capone')).toBe(true)
@@ -60,7 +60,30 @@ describe('nameMatch', () => {
 
 
 
-
+  //   if (knownAliases.includes(recordName) || (rFirst === kMiddle && rMiddle === kFirst && rLast === kLast)) {
+  //     return true;
+  //   }
+  //   // middle initial and transposition
+  //   else if (
+  //     (rMiddle.length === 1 || kMiddle.length === 1) &&
+  //     rFirst === kFirst &&
+  //     rLast === kLast
+  //   ) {
+  //     if(rMiddle === kMiddle[0] || rMiddle[0] === kMiddle){
+  //       return true
+  //     }
+  //   }
+  //   // middle name is missing in alias
+  //   else if (newKnown.length === 2) {
+  //     if(kFirst === rFirst && kMiddle === rLast){
+  //       return true
+  //     }
+  //   } else if (newRecord.length === 2) {
+  //     if(kFirst === rFirst && rMiddle === kLast){
+  //       return true
+  //     }
+  //   } 
+  // }
 
 
 

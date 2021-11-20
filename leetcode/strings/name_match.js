@@ -94,35 +94,20 @@ module.exports = function nameMatch(knownAliases, recordName) {
   let newRecord = recordName.split(" ");
   let [rFirst, rMiddle, rLast] = newRecord;
 
+  if(knownAliases.includes(recordName)){
+    return true
+  }
+
   for (let i = 0; i < knownAliases.length; i++) {
     //exact match and exact transposition
     let newKnown = knownAliases[i].split(" ");
     let [kFirst, kMiddle, kLast] = newKnown;
-    if (knownAliases.includes(recordName) || (rFirst === kMiddle && rMiddle === kFirst && rLast === kLast)) {
-      return true;
+    if(transName(newKnown, newRecord)){
+      return true
     }
-    // middle initial and transposition
-    else if (
-      (rMiddle.length === 1) &&
-      rFirst === kMiddle &&
-      rMiddle === kFirst && rLast === kLast
-    ) {
-      return rMiddle === kFirst[0] 
-    }
-    else if (
-      (rMiddle.length === 1 || kMiddle.length === 1) &&
-      rFirst === kFirst &&
-      rLast === kLast
-    ) {
-      return rMiddle === kMiddle[0] || rMiddle[0] === kMiddle;
-    }
-    // middle name is missing in alias
-    else if (newKnown.length === 2) {
-      return kFirst === rFirst && kMiddle === rLast;
-    } else if (newRecord.length === 2) {
-      return kFirst === rFirst && rMiddle === kLast;
-    } 
   }
+
+
 
   return false;
 };
@@ -159,3 +144,34 @@ module.exports = function nameMatch(knownAliases, recordName) {
 // # name_match(knownAliases, 'Alphonse Capone Gabriel') => False
 // # name_match(knownAliases, 'Capone Alphonse Gabriel') => False
 // # name_match(knownAliases, 'Capone Gabriel') => False
+
+
+function transName(newKnown, newRecord){
+  let [rFirst, rMiddle, rLast] = newRecord;
+  let [kFirst, kMiddle, kLast] = newKnown
+
+
+   if (
+        (rMiddle.length === 1 || kMiddle.length === 1) &&
+        rFirst === kFirst &&
+        rLast === kLast
+      ) {
+        if(rMiddle === kMiddle[0] || rMiddle[0] === kMiddle){
+          return true
+        }
+      }
+      // middle name is missing in alias
+      else if (newKnown.length === 2) {
+        if(kFirst === rFirst && kMiddle === rLast){
+          return true
+        }
+      } else if (newRecord.length === 2) {
+        if(kFirst === rFirst && rMiddle === kLast){
+          return true
+        }
+      } 
+    
+
+    return false
+  
+}

@@ -18,19 +18,19 @@ let repeatedSubstringPattern = function(s) {
     for(let i = 0; i < s.length; i++){
         subStr += s[i]
         let subFirstIndex = 0
-        let subEndIndex = subStr.length
+        let subEndIndex = subStr.length - 1
         
         while(subEndIndex <= s.length - 1){
-            let matchString = s.substring(subFirstIndex, subEndIndex)
-            //console.log(matchString, subStr)
+            let matchString = s.substring(subFirstIndex, subEndIndex+1)
+            console.log(matchString, subStr)
             if(subStr !== matchString){
                 break
             }
             else{
-                subFirstIndex += subStr.length 
-                subEndIndex += subStr.length
-                if(subEndIndex === s.length){
+                if(subEndIndex+1 === s.length){
+                    console.log(subEndIndex+1, s.length)
                     if(subStr === matchString){
+                        console.log(subStr, matchString)
                         return true
                     }
                     else{
@@ -40,18 +40,20 @@ let repeatedSubstringPattern = function(s) {
                 
             }
 
+            subFirstIndex += subStr.length 
+            subEndIndex += subStr.length
+
         }
        
         
     }
     
-    return false
-        
+    return false      
     
 };
 
 
-console.log(repeatedSubstringPattern("abcabcabcabc"))
+console.log(repeatedSubstringPattern("abac"))
 // iterate over string parameter
     // use the substring method 
     // declare a variable with substring 

@@ -9,27 +9,17 @@
 
 var maxProfit = function(prices) {
 
-    let buyDay = 0
-    let buyPrice = 0
-
-    let sellDay = 0 
-    let sellPrice = 0
-    let temp
-
-    for(let i = 0; i < prices.length; i++){
-        temp = prices[0]
-        if(prices[i] < temp){
-            buyDay = i
-            buyPrice = prices[i]
-            console.log(buyDay, buyPrice)
+    let low = prices[0] 
+    let profit = 0 
+    for(let i = 0; i < prices.length; i++) {
+        if ( prices[i] < low ) {
+            low = prices[i]
+        } 
+        if ( prices[i] - low > profit) {
+            profit = prices[i] - low 
         }
-       
-        
-        
     }
-    
-    
-
+    return profit
     
 }
 

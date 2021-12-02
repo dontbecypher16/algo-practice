@@ -12,3 +12,19 @@
 # Example
     let testMeasurements = [157, 158, 167, 157, 148, 154, 155]
     Output: 4
+
+
+# *********************************************************
+# Part 2 of problem
+
+# Input
+    type will be object to get sum value of three-number grouping 
+
+# Output
+    type will be integer value
+
+# Assumptions
+    Is the letters always three-letter pattern?
+    Is it all the way through A-Z?
+    
+# Example

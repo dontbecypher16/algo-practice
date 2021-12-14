@@ -17,23 +17,26 @@
 
 function findMaxAverage(nums, k){
  
-   let maxStorage = []
    let start = 0
    let end = start + k
 
    let reducer = (prev, curr) => prev + curr
    
-
     let result
+    let maxValue = Number.MIN_SAFE_INTEGER
+
     for(let i = 0; i < nums.length; i++){
         if(nums.length === 1){
             result = nums[i]
             return result
         }
         let window = nums.slice(start, end)
-        let maxValue = window.reduce(reducer)
+        let sumValue = window.reduce(reducer)
          if(window.length === k){
-            maxStorage.push(maxValue / k)
+            let avgValue = sumValue / k
+            if(avgValue > maxValue){
+                maxValue = avgValue
+            }
             start++
             end++
 
@@ -41,18 +44,8 @@ function findMaxAverage(nums, k){
 
 
     }
-
-    let startingPoint = maxStorage[0]
-
-    for(let j = 0; j < maxStorage.length; j++){
-        if(maxStorage[j] > startingPoint){
-            startingPoint = maxStorage[j]
-        }
-
-        
-    }
     
-    return startingPoint
+    return maxValue
 
 }
 

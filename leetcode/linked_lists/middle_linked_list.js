@@ -14,7 +14,7 @@ class LinkedList{
 }
 
   let middleNode = function(head){
-      let head = new LinkedList()
+      head = new LinkedList()
       
   }
 

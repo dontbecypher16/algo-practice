@@ -21,53 +21,56 @@ let scores = require('./letter_scores')
 
 
 
-function scrabble(string, arr, scorecard){
-    const foundWords = [];
+function scrabble(string, arr, scorecard) {
+  const foundWords = [];
 
-    // interate over wordlist
-    for(let i = 0; i < arr.length; i++){
-        let tempString = string.toLowerCase();
-        let word = arr[i].toLowerCase();
+  // iterate over wordlist
+  for (let i = 0; i < arr.length; i++) {
+    let tempString = string.toLowerCase();
+    let word = arr[i].toLowerCase();
+    let wordscore = 0;
 
-        // split and iterate over word's letters
-        for(let j = 0; j < word.length; j++){
-            let letter = word[j]
+    // split and iterate over word's letters
+    for (let j = 0; j < word.length; j++) {
+      let letter = word[j];
 
-            // get index of letter in string
-            let indexStr = tempString.indexOf(letter)
+      // get index of letter in string
+      let indexStr = tempString.indexOf(letter);
 
-            // define word score
-            let wordscore = 0;
+      // if letter is found is string
+      if (indexStr > -1) {
+        // remove letter from string
+        tempString =
+          tempString.substr(0, indexStr) + tempString.substr(indexStr + 1);
 
-            // if letter is found is string
-            if(indexStr > -1){
-                // remove letter from string
-                tempString = tempString.substr(0, indexStr) + tempString.substr(indexStr + 1)
+        // add scrabble points for letter
+        wordscore += scorecard[letter];
 
-                // add scrabble points for letter
-                wordscore += scorecard[letter];
-                
-            }else{
-                break
-            }
-            // add points and word to found words
-            let foundWord = ''
-            foundWord += wordscore.toString()
-            foundWord += ' '
-            foundWord += word
-            foundWords.push(foundWord)
-
-         
+        if (j === word.length - 1) {
+          let foundWord = "";
+          let foundScore = "";
+          if (wordscore < 10) {
+            foundScore = "0" + wordscore.toString();
+          } else {
+            foundScore = wordscore.toString();
+          }
+          foundWord += foundScore;
+          foundWord += " ";
+          foundWord += word;
+          foundWords.push(foundWord);
         }
-
-        
-
+      } else {
+        break;
+      }
     }
+  }
 
-    //console.log(foundWords)
-
-
+  let result = foundWords.sort().reverse();
+  result.forEach((element) => {
+    console.log(element);
+  });
 }
+
 let test = 'SPCQEIU'
 console.log(scrabble(test, words, scores))
 

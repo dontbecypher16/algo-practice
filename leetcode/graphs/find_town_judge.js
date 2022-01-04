@@ -30,15 +30,25 @@ Output: 3
  * 
  */
 
-var findJudge = function(n, trust) {
+// var findJudge = function(n, trust) {
 
-    for(let i = 0; i < trust.length; i++){
-         
-    }
+//     let mapOfTrust = new Map
+
+//         let i = 0
+//         let j = 0
+
+//         for(let subArr of trust){
+//             mapOfTrust.set(i, subArr[j][1])
+//             i++, j++
+//         }
+
+//     return mapOfTrust
 
 
     
-}
+// }
+
+
 
 
 /**
@@ -48,7 +58,29 @@ var findJudge = function(n, trust) {
  * 
  * index 0 can never be the judge 
  * judge will always be in index 1
- * in each pair no duplica
+ * in each pair no duplicates
+ * index 0 and index 1 can not have the same value
  * 
  */
 
+var findJudge = function(N, trust) {
+    let trustCounts = new Array(N + 1).fill(0);
+    for (let [a, b] of trust) {
+        trustCounts[a] = trustCounts[a] - 1;
+        trustCounts[b] = trustCounts[b] + 1;
+    }
+
+    [0, -3, -1, 3, 1]
+    
+    for (let i = 1; i < trustCounts.length; i++) {
+        if (trustCounts[i] === N - 1) {
+            return i
+        }
+    }
+    return -1
+};
+
+
+let noTrust = [[1,3],[1,4],[2,3],[2,4],[4,3]]
+let m = 4
+console.log(findJudge(m, noTrust))

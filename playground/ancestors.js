@@ -13,11 +13,29 @@
 //   {"id": 41, "name": "Account 41", "parent": 4},
 // ]`
 /*
+
+[
+  1: [
+    {"id": 2, "name": "Account 2", "parent": 1},
+    {"id": 3, "name": "Account 3", "parent": 1},
+    {"id": 4, "name": "Account 4", "parent": 1},
+  ],
+
+]
+
+
         1
    /    |     \
   2     3      4
  / |  |  |    | |
 20 21 30 31  40 41
+[3 4 20 21]
+        1
+   /
+  2
+ / 
+20
+
 */
 
 /**
@@ -54,25 +72,24 @@ get_ancestors(elements[4]) == [
  * 
  */
 
-function get_root(elements, obj) {
+function get_root(elements, obj) { // O(n + logn)
+  let idToObject = new Map();
+
+  // give the map an id
+  // give us the parent node
+
+  for (let i = 0; i < elements.length; i++) { // O(n) // 10
+    let node = elements[i];
+
+    idToObject[node.id] = node; // O(1)
+  }
+
   let result = [obj];
 
-  while (result[result.length - 1]["parent"] !== null) {
-    for (let i = 0; i < elements.length; i++) {
-      let node = elements[i];
-
-      if (result.length === 1) {
-        if (node.id === obj["parent"]) {
-          // node is obj parent
-          result.push(node);
-          break;
-        } 
-      } else if (result.length > 1) {
-        if (node.id === result[result.length - 1]["parent"]) {
-          result.push(node);
-        }
-      }
-    }
+  while (result[result.length - 1]["parent"] !== null) { // O(logn)
+    let current = result[result.length - 1];
+    let parent = idToObject[current.parent]; // O(1)
+    result.push(parent);
   }
 
   //return array of ancestors
@@ -81,37 +98,36 @@ function get_root(elements, obj) {
 
 
 function get_children(elements, obj) {
-  let result2 = [];
 
-  let stack = [obj];
 
-  while (stack.length > 0) {
-    // get node from stack
-    // do something with it
-    // load node.children into stack
+  let result2 = [obj];
 
-    let check = stack.pop();
 
-    for (let j = 0; j < elements.length; j++) {
-      let node = elements[j];
-      if (check["id"] === node["parent"]) {
-        stack.push(node);
-      }
-    }
+ let childMap = new Map()
+ // given the id of a node
+ // return all immediate children of that node
+ 
+ for (let j = 0; j < elements.length; j++) {
+   let node = elements[j];
+   let check = childMap.has(node.parent);
+   if (check) {
+     let answer = childMap.get(node.parent)
+    childMap
+   } else {
+     childMap.set(node.parent, [node]);
+   }
+ }
 
-    if(check["id"] !== obj["id"]){
-      result2.push(check);
-
-    }
-  }
+ console.log(childMap)
 
   return result2;
 }
 
 
 function combineFamily(elements, obj){
-    let children = get_children(elements, obj)
-    let parents = get_root(elements, obj)
+    let children = get_children(elements, obj) // nlogn
+    let parents = get_root(elements, obj) // n^2
+    // n^2
 
     return children.concat(parents)
 }
@@ -129,11 +145,30 @@ let test = [
     {"id": 41, "name": "Account 41", "parent": 4},
 ]
 
-console.log(combineFamily(test, test[1]))
+// console.log(combineFamily(test, test[1]))
+
+// console.log(get_children(test, test[0]));
+console.log(get_children(test, test[1]));
 
 
+  //   let stack = [obj];
 
+  // while (stack.length > 0) { // O(n)
+  //   // get node from stack
+  //   // do something with it
+  //   // load node.children into stack
 
+  //   let check = stack.pop();
 
+  //   for (let j = 0; j < elements.length; j++) { // O(n)
+  //     let node = elements[j];
+  //     if (check["id"] === node["parent"]) {
+  //       stack.push(node);
+  //     }
+  //   }
 
-   
+  //   if(check["id"] !== obj["id"]){
+  //     result2.push(check);
+
+  //   }
+  // }

@@ -21,3 +21,4 @@ let reverseList = function (head) {
 
 let output = [5, 4, 3, 2, 1]
 console.log(reverseList(output))
+

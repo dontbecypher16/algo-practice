@@ -18,7 +18,9 @@ const convertToJson = async (csvFilePath) => {
     
         }
     
-        console.log(result, highestPaid)
+        //console.log(result, highestPaid)
+
+        console.log(jsonArrayObj)
 
   }
 

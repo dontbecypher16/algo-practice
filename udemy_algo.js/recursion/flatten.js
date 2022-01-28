@@ -59,7 +59,6 @@
 
 function flattenNew([first, ...rest]) {
     if (!first) {
-        debugger;
         return [];  
     }
     if (Array.isArray(first)) {

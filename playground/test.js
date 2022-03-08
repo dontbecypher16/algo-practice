@@ -1,29 +1,24 @@
-function addUpTo(n){
-    return n * (n + 1) / 2;
+// function buildArray(nums) {
+//   let ans = [];
+
+//   for (let i = 0; i < nums.length; i++) {
+//     if (nums[i] || nums[i] === 0) {
+//       ans.push(nums[nums[i]]);
+//     }
+//   }
+
+//   return ans;
+// }
+
+// console.log(buildArray([5, 0, 1, 2, 3, 4]));
+
+function getConcat(nums) {
+  let temp = nums;
+  let ans = temp;
+
+  let result = ans.concat(nums);
+  return result;
 }
 
+console.log(getConcat([1, 2, 1]));
 
-function addUpTo2(n){
-    let total = 0
-
-    for(let i = 1; i <= n; i++){
-        total += i;
-    }
-
-    return total
-}
-
-
-
-function onlyElementsAtEvenIndex(array) {
-    var newArray = Array(Math.ceil(array.length / 2));
-    for (var i = 0; i < array.length; i++) {
-        if (i % 2 === 0) {
-            newArray[i / 2] = array[i];
-        }
-    }
-    return newArray;
-}
-
-console.log(addUpTo(6))
-console.log(addUpTo2(6))

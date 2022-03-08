@@ -1,52 +1,51 @@
-
 /**
  * Merge Sort
- * 
+ *
  * Now the sorting aspect after learning merging concept comes to play.
  * Will have to use recursion to implement sorting.
- * 
- *  
+ *
+ *
  *
  */
 
+function merge(arr1, arr2) {
+  let result = [];
+  let i = 0;
+  let j = 0;
 
-function merge_sort(arr1, arr2){
-
-    let result = []
-    let i = 0
-    let j = 0
-
-    while(i < arr1.length  && j <arr2.length){
-        if(arr1[i] > arr2[j]){
-            result.push(arr2[j])
-            j++
-            
-        }else{
-            result.push(arr1[i])
-            i++
-        }
-
-
+  while (i < arr1.length && j < arr2.length) {
+    if (arr1[i] > arr2[j]) {
+      result.push(arr2[j]);
+      j++;
+    } else {
+      result.push(arr1[i]);
+      i++;
     }
-    while(i < arr1.length){
-            result.push(arr1[i])
-            i++
-            
-        
-    }
-    while(j < arr2.length){
-            result.push(arr2[j])
-            j++
-            
-        
-    }
- 
+  }
+  while (i < arr1.length) {
+    result.push(arr1[i]);
+    i++;
+  }
+  while (j < arr2.length) {
+    result.push(arr2[j]);
+    j++;
+  }
 
-    return result.sort(function(a, b) {return a - b})
-   
-
-
+  return result;
 }
 
+function mergeSort(arr) {
+  if (arr.length <= 1) {
+    return arr;
+  }
 
-console.log(merge_sort([1, 50, 10], [2, 99, 14, 100]))
+  let mid = Math.floor(arr.length / 2);
+  let left = mergeSort(arr.slice(0, mid));
+  let right = mergeSort(arr.slice(mid));
+
+  return merge(left, right);
+}
+
+console.log(mergeSort(merge([1, 50, 10], [2, 99, 14, 100])));
+
+console.log(merge([1, 50, 10], [2, 99, 14, 100]));
